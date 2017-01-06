@@ -25,7 +25,7 @@ import za.co.sindi.common.utils.PreConditions;
  * @since 29 October 2012
  *
  */
-public class Lists {
+public final class Lists {
 
 	private Lists() {
 		throw new AssertionError("Private Constructor.");

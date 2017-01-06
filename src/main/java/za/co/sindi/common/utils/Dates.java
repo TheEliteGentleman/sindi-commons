@@ -17,6 +17,7 @@
  */
 package za.co.sindi.common.utils;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -131,6 +132,11 @@ public final class Dates {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
         simpleDateFormat.setLenient(false); // Don't automatically convert invalid date.
         return simpleDateFormat.parse(dateString);
+    }
+    
+    public static String format(Date date, String dateFormatPattern) {
+    	DateFormat dateFormat = new SimpleDateFormat(dateFormatPattern);
+    	return dateFormat.format(date);
     }
 
     // Validators ---------------------------------------------------------------------------------

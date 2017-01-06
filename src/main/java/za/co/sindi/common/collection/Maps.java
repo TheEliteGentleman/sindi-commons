@@ -20,7 +20,7 @@ import za.co.sindi.common.utils.PreConditions;
  * @since 07 July 2013
  *
  */
-public class Maps {
+public final class Maps {
 	
 	private Maps() {
 		throw new AssertionError("Private Constructor.");

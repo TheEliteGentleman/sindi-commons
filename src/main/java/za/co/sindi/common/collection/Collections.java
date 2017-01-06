@@ -10,7 +10,7 @@ import java.util.RandomAccess;
 
 import za.co.sindi.common.functional.Function;
 import za.co.sindi.common.functional.Predicate;
-import za.co.sindi.common.util.CaseInsensitiveMap;
+import za.co.sindi.common.util.CaseInsensitiveHashMap;
 import za.co.sindi.common.utils.PreConditions;
 
 /**
@@ -20,7 +20,7 @@ import za.co.sindi.common.utils.PreConditions;
  * @since 26 March 2013
  *
  */
-public class Collections {
+public final class Collections {
 
 	private Collections() {
 		throw new AssertionError("Private Constructor.");
@@ -136,7 +136,7 @@ public class Collections {
 		}
 	}
 	
-	public static <V> Map<String,V> caseInsensitiveMap(Map<? extends String, ? extends V> m) {
-		return new CaseInsensitiveMap<V>(m);
+	public static <V> Map<String,V> caseInsensitiveMap(Map<String, V> m) {
+		return new CaseInsensitiveHashMap<V>(m);
 	}
 }
