@@ -26,7 +26,31 @@ public final class Arrays {
 	public static <T> Set<T> asSet(T... t) {
 		return new HashSet<>(java.util.Arrays.asList(t));
 	}
+	
+	public static byte[] append(final byte[] array, final byte b) {
+		byte[] newArray = new byte[array.length + 1];
+		System.arraycopy(array, 0, newArray, 0, array.length);
+		newArray[newArray.length - 1] = b;
+		
+		return newArray;
+	}
+	
+	public static byte[] concat(final byte[] array1, final byte[] array2) {
+		byte[] newArray = new byte[array1.length + array2.length];
+		System.arraycopy(array1, 0, newArray, 0, array1.length);
+		System.arraycopy(array2, 0, newArray, array1.length, array2.length);
+		
+		return newArray;
+	}
 
+	public static byte[] prepend(final byte[] array, final byte b) {
+		byte[] newArray = new byte[array.length + 1];
+		newArray[0] = b;
+		System.arraycopy(array, 0, newArray, 1, array.length);
+		
+		return newArray;
+	}
+	
 	public static int[] toPrimitives(Integer[] array) {
 		if (array == null) {
 			return null;

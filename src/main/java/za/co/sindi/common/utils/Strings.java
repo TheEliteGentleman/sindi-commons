@@ -17,7 +17,7 @@ public final class Strings {
 	}
 	
 	/**
-	 * Checks if the {@link CharSequence} was null, empty or blank.
+	 * Checks if the {@link CharSequence} is null, empty or blank.
 	 * 
 	 * @param str
 	 * @return true if the criteria fits, false otherwise.
