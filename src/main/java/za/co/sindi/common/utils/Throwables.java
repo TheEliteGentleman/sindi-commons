@@ -5,8 +5,8 @@ package za.co.sindi.common.utils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.function.Predicate;
 
-import za.co.sindi.common.functional.Predicate;
 
 
 /**
@@ -22,7 +22,7 @@ public final class Throwables {
 	
 	public static Throwable getCause(Throwable throwable, Predicate<Throwable> stopPredicate) {
 		Throwable cause = throwable;
-		while (/*cause != null &&*/ !stopPredicate.apply(cause)) {
+		while (/*cause != null &&*/ !stopPredicate.test(cause)) {
 			cause = cause.getCause();
 		}
 		
